@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&display=swap");
+
 :root {
     --primary-color: #020228;
     --secondary-color: #ff00e5;
@@ -38,3 +41,69 @@
 ::-webkit-scrollbar-thumb:hover {
     background: var(--secondary-color);
 }
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Raleway";
+}
+
+/*****************
+HEADER 
+*****************/
+
+header {
+    background: var(--primary-color);
+}
+
+@media screen AND (min-width: 320px) {
+    .header {
+        display: flex;
+        flex-wrap: wrap;
+        position: sticky;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .header img {
+        max-width: 30%;
+        width: auto;
+        padding: 1em 0 1.5em 0;
+    }
+
+    .header ul {
+        margin: 5px 0 10px 0;
+    }
+
+    .header ul > li {
+        display: inline;
+        list-style: none;
+    }
+
+    .header ul li a {
+        text-decoration: none;
+        padding: 8px 26px;
+        color: white;
+        text-transform: uppercase;
+        font-size: 0.9rem;
+        font-weight: bold;
+    }
+
+    #buy-now {
+        background-color: var(--tertiary-color);
+        border-radius: 20px;
+        transition: 1s ;
+    }
+
+    #buy-now:hover {
+        background-color: #FFF;
+        color: var(--primary-color);
+
+    }
+}
+
