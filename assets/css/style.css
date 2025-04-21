@@ -15,6 +15,7 @@
     --divider-bg-color: linear-gradient(90deg,
             #5516ba,
             rgba(255, 0, 229, 0.5) 80%);
+    --bg-subscribe-color: linear-gradient(120deg, #b535f6, #020228, #ff00e5);
     --nav-bg-color: rgba(0, 0, 0, 0.3);
     --text-color: #fff;
     --link-color: #9e86ff;
@@ -49,25 +50,22 @@
 
 body {
     font-family: "Raleway";
+    background: var(--primary-color);
 }
 
 /*****************
 HEADER 
 *****************/
 
-header {
-    background: var(--primary-color);
-}
-
-@media screen AND (min-width: 320px) {
+@media screen AND (max-width: 420px) {
     .header {
         display: flex;
-        flex-wrap: wrap;
-        position: sticky;
+        flex-direction: column;
         text-align: center;
         justify-content: center;
         align-items: center;
         padding: 20px;
+        background-color: var(--nav-bg-color);
     }
 
     .header img {
@@ -80,7 +78,7 @@ header {
         margin: 5px 0 10px 0;
     }
 
-    .header ul > li {
+    .header ul>li {
         display: inline;
         list-style: none;
     }
@@ -97,13 +95,67 @@ header {
     #buy-now {
         background-color: var(--tertiary-color);
         border-radius: 20px;
-        transition: 1s ;
+        transition: 1s;
     }
 
     #buy-now:hover {
         background-color: #FFF;
         color: var(--primary-color);
+    }
 
+    main {
+        background-color: #000;
+    }
+
+    .container {
+        padding: 0 10%;
+        padding-top: 50px;
+
+        text-align: center;
+        color: #FFFFFF;
+    }
+
+    .container .images {
+        padding-bottom: 5em;
+    }
+
+    .container h2 {
+        margin: 10px;
+        text-transform: uppercase;
+        font-size: 32px;
+    }
+
+    .container h1 {
+   
+        text-transform: uppercase;
+        font-size: 42px;
+    }
+
+    .divider {
+        width: 100%;
+        height: 5px;
+        margin: 30px 0;
+        background: var(--divider-bg-color);
+    }
+
+    .subscribe p {
+        font-size: 20px;
+    }
+
+    .subscribe p > span {
+        font-size: 40px;
+    }
+
+    .subscribe button {
+        margin: 25px;
+        padding: 12px 40px;
+        border: none;
+        border-radius: 20px;
+
+        color: #FFF;
+        font-size: 16px;
+        text-transform: uppercase;
+
+        background: var(--btn-bg-color-gradient);
     }
 }
-
